@@ -4,11 +4,9 @@ import { useGSAP } from "@gsap/react";
 
 const Jason = () => {
   useGSAP(() => {
-    gsap.set(".jason", {
-      marginTop: "-80vh",
-    });
+    gsap.set(".jason", { marginTop: "-80vh" });
 
-    const tl = gsap
+    gsap
       .timeline({
         scrollTrigger: {
           trigger: ".jason",
@@ -17,14 +15,10 @@ const Jason = () => {
           scrub: 2,
         },
       })
-      .to(".first-vd", {
-        opacity: 0,
-        duration: 1,
-        ease: "power1.inOut",
-      });
+      .to(".first-vd", { opacity: 0, duration: 1, ease: "power1.inOut" });
 
     gsap.to(
-      ".jason",
+      ".jason .img-box",
       {
         scrollTrigger: {
           trigger: ".jason",
